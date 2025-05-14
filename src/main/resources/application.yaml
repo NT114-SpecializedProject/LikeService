@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: LikeService
+  datasource:
+    url: jdbc:mysql://localhost:3306/like_microservice
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  jackson:
+    default-property-inclusion: non_null
+server:
+  port: 8085
