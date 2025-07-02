@@ -11,6 +11,6 @@ import lombok.NoArgsConstructor;
 @Builder
 public class LikeRequest {
     private Long userId;
-    private Long postId;
+    private Long blogId;
     private Long commentId;
 }

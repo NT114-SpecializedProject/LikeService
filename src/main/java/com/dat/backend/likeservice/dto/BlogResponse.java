@@ -5,15 +5,17 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class LikeResponse {
+public class BlogResponse {
     private Long id;
-    private Long userId;
-    private Long blogId;
-    private Long commentId;
-    private Long createdAt;
-    private Long likeCount;
+    private String title;
+    private String content;
+    private int likeCount;
+    private Long authorId;
+    private LocalDateTime createdAt;
 }

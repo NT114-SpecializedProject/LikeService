@@ -11,15 +11,15 @@ public interface LikeRepository extends JpaRepository<Like, Long> {
             value = "select count(*) from likes where comment_id = ?1",
             nativeQuery = true
     )
-    Long countByCommentId(Long postId);
+    Long countByCommentId(Long commentId);
 
     @Query(
-            value = "select count(*) from likes where post_id = ?1",
+            value = "select count(*) from likes where blog_id = ?1",
             nativeQuery = true
     )
-    Long countByPostId(Long commentId);
+    Long countByBlogId(Long blogId);
 
-    Long findByPostIdAndUserId(Long postId, Long userId);
+    Like findByBlogIdAndUserId(Long postId, Long userId);
 
-    Long findByCommentIdAndUserId(Long commentId, Long userId);
+    Like findByCommentIdAndUserId(Long commentId, Long userId);
 }

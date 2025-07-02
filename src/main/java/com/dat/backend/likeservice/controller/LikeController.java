@@ -18,8 +18,8 @@ public class LikeController {
     private final LikeService likeService;
 
     // Create a new like
-    @PostMapping("/create")
-    public ResponseEntity<LikeResponse> create(@RequestBody LikeRequest likeRequest) {
-        return ResponseEntity.ok(likeService.createLike(likeRequest));
+    @PostMapping("/action")
+    public ResponseEntity<String> action(@RequestBody LikeRequest likeRequest) {
+        return ResponseEntity.ok(likeService.actionLike(likeRequest));
     }
 }

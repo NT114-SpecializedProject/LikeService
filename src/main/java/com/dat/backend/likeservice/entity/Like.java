@@ -1,9 +1,6 @@
 package com.dat.backend.likeservice.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Data
@@ -15,9 +12,10 @@ public class Like {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private Long userId;
-    private Long postId;
+    @Column(name = "blog_id")
+    private Long blogId;
+    @Column(name = "comment_id")
     private Long commentId;
     private Long createdAt;
 }
