@@ -1,8 +1,6 @@
 package com.dat.backend.likeservice.controller;
 
 import com.dat.backend.likeservice.dto.LikeRequest;
-import com.dat.backend.likeservice.dto.LikeResponse;
-import com.dat.backend.likeservice.entity.Like;
 import com.dat.backend.likeservice.service.LikeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -17,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class LikeController {
     private final LikeService likeService;
 
-    // Create a new like
+    // Create action like or unlike
     @PostMapping("/action")
     public ResponseEntity<String> action(@RequestBody LikeRequest likeRequest) {
         return ResponseEntity.ok(likeService.actionLike(likeRequest));

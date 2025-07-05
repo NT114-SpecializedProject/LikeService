@@ -21,7 +21,6 @@ WORKDIR /app
 # Copy JAR đã build từ stage trước
 COPY --from=build /app/target/*.jar app.jar
 
-# Mở cổng userservice chạy (ví dụ 8085)
 EXPOSE 8085
 
 # Lệnh chạy ứng dụng
